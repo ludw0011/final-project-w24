@@ -1,0 +1,191 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "poppins", sans-serif;
+    margin: 0;
+}
+
+h1 {
+    font-size: 2.027rem;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 1.802rem;
+    text-align: center;
+    padding-top: 30px;
+}
+
+h3 {
+    font-size: 1.266rem;
+}
+
+img {
+    width: 100%;
+    border-radius: 2.5%;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    text-transform: uppercase;
+    font-size: x-large;
+    text-wrap: nowrap;
+    
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    max-width: 960px;
+    margin: auto;
+    padding: 0 8px;
+}
+
+.sweetheart {
+    max-width: 960px;
+    margin: auto;
+    padding: 0 8px;
+}
+
+.sweetheart .images {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: 
+    "div1 div1 div1 div1 div1 div1"
+    "div1 div1 div1 div1 div1 div1"
+    "div1 div1 div1 div1 div1 div1"
+    "div2 div2 div3 div3 div4 div4";   
+    gap: 20px;
+}
+
+.sweetheart .images img:nth-child(1){
+    grid-area: div1;
+}
+
+.sweetheart .images img:nth-child(2){
+    grid-area: div2;
+}
+
+.sweetheart .images img:nth-child(3){
+    grid-area: div3;
+}
+
+.sweetheart .images img:nth-child(4){
+    grid-area: div4;
+}
+
+.sweetheart div :nth-child(2) {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.btn {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    display: inline-block;
+    margin-top: 20px;  
+    border-radius: 5px; 
+}
+
+.behindthedough {
+    background-color: #f8fafc;
+}
+
+.behindthedough h2 {
+    text-align: center;
+}
+
+.behindthedough div {
+    display: grid;
+    max-width: 960px;
+    margin: auto;
+    padding: 0 8px 50px;
+    
+}
+
+.reviews {
+    background-color: #000;
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+
+.reviews div{
+    max-width: 960px;
+    margin: auto;
+}
+
+blockquote {
+    padding: 5px 0;
+}
+
+.otherproducts div .cartons {
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+    background-color: #f8fafc;
+    border-radius: 2.5%
+}
+
+.product-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+footer {
+background-color: #000;
+color: #fff;
+padding: 10px;
+text-align: center;
+text-wrap: nowrap;
+margin-top: 30px;
+}
+
+@media (min-width: 768px) {
+    .sweetheart .images {
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+        grid-template-areas: 
+        "div1 div2"
+        "div3 div4"
+        ;
+    }
+    .behindthedough div {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    .reviews div {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .product-group {
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+
+@media (min-width: 960px) {
+   .sweetheart {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+   }
+}
